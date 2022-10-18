@@ -1,0 +1,225 @@
+
+body{
+    background-color: gainsboro;
+
+}
+header{
+    background-position: center;
+    background-size: cover;
+    max-height: 76px;
+}
+header .links li{
+
+    transition: 600ms;
+    border-radius: 25px 25px 0px 0px;
+}
+header .links li:hover{
+    background: #f9f57d;
+    color: black;
+}
+header a{
+    text-decoration: none;
+    color: black;
+}
+header a:hover{
+    color: black;
+}
+.secColor{
+   color: #219EBC; 
+}
+
+.topText .icon{
+    text-align: center;
+    background-color: #219EBC;
+    color:white;
+    font-size: larger;
+    border-radius: 2px;
+    font-family: 'Libre Baskerville', serif;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15), -2px 3px 1px rgba(206,89,55,0);
+
+}
+.table{
+    background-color: white;
+}
+ .block{
+    border-radius: 6px;
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+}
+.container .Title h3::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width:24%;
+    background-color: #FB8500;
+    margin-top: 2px;
+}
+.container .TitleB h3::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 19%;
+    background-color: #FB8500;
+    margin-top: 2px;
+}
+.table a{
+    color: #219EBC; 
+}
+tbody td .Method{
+   border-radius: 20px;
+   color: white;
+   padding: 6px;
+   text-align: center;
+}
+
+
+@media screen and (max-width:1200px){
+    .container .Title h3::after{
+        content: "";
+        display: block;
+        height: 3px;
+        width:28%;
+        background-color: #FB8500;
+        margin-top: 2px;
+    }
+    .container .TitleB h3::after{
+        content: "";
+        display: block;
+        height: 3px;
+        width: 20%;
+        background-color: #FB8500;
+        margin-top: 2px;
+    }
+    
+}
+@media screen and (max-width:992px){
+    .container .Title h3::after{
+        content: "";
+        display: block;
+        height: 3px;
+        width:32%;
+        background-color: #FB8500;
+        margin-top: 2px;
+    }
+    .container .TitleB h3::after{
+        content: "";
+        display: block;
+        height: 3px;
+        width: 27%;
+        background-color: #FB8500;
+        margin-top: 2px;
+    }
+    
+}
+@media screen and (max-width:768px){
+    .container .Title h3::after{
+        content: "";
+        display: block;
+        height: 3px;
+        width:47%;
+        background-color: #FB8500;
+        margin-top: 2px;
+    }
+    .container .TitleB h3::after{
+        content: "";
+        display: block;
+        height: 3px;
+        width: 33%;
+        background-color: #FB8500;
+        margin-top: 2px;
+    }
+    
+}
+@media screen and (max-width:468px){
+    .container .Title h3::after{
+        content: "";
+        display: block;
+        height: 3px;
+        width:57%;
+        background-color: #FB8500;
+        margin-top: 2px;
+    }
+    .container .TitleB h3::after{
+        content: "";
+        display: block;
+        height: 3px;
+        width: 43%;
+        background-color: #FB8500;
+        margin-top: 2px;
+    }
+    
+}
+body{
+    background-color: gainsboro;
+}
+header{
+    background-position: center;
+    background-size: cover;
+    max-height: 76px;
+}
+header .links li{
+    cursor: pointer;
+    transition: 600ms;
+    border-radius: 25px 25px 0px 0px;
+}
+header .links li:hover{
+    background: #f9f57d;
+    color: black;
+}
+header a{
+    text-decoration: none;
+    color: black;
+}
+header a:hover{
+    color: black;
+}
+.secColor{
+   color: #219EBC; 
+}
+.topText  h2{
+    position: relative;
+}
+.topText .icon{
+    text-align: center;
+    background-color: #219EBC;
+    color:white;
+    font-size: larger;
+    border-radius: 2px;
+
+}
+.table{
+    background-color: white;
+}
+ .block{
+    border-radius: 6px;
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+}
+.container .Title h3::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width:24%;
+    background-color: #FB8500;
+    margin-top: 2px;
+}
+.container .TitleB h3::after{
+    content: "";
+    display: block;
+    height: 3px;
+    width: 19%;
+    background-color: #FB8500;
+    margin-top: 2px;
+}
+.table a{
+    color: #219EBC; 
+}
+tbody td .Method{
+   border-radius: 20px;
+   color: white;
+   padding: 6px;
+   text-align: center;
+}
+

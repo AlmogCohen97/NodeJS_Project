@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx' crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/doc.css">
+    <title>API-Documentaion</title>
+
+</head>
+
+<body>
+    <header class="border-bottom border-secondary border-2 p-3 w-100" style="background-image: url(images/HeaderBG.jpg);">
+        <div class="container">
+        <nav class="d-flex m-0">
+            <ul class="links list-unstyled d-flex px-3 h5 ms-5 ">
+                <li class="px-3 py-3  m-0"><a href="https://github.com/AlmogCohen97/Node.JS-Project">View on Github</a></li>
+                <li class="px-3 py-3 m-0"><a href="#">Render Website</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <div class="topText container text-center mt-1 mb-3 m d-flex">
+        <div class="block col-3 d-none d-lg-block border border-2 border-dark"
+            style="background-image:url(images/first.jpg) ;"></div>
+        <div class="text-center col-10 col-lg-6 mt-4">
+            <h2><span class="icon px-1 pb-0 pt-2 mb-3 shadow">F</span>urniture <span class="secColor"> Api
+                </span>documentation</h2>
+            <h6 class="m-1 p-1">Hey, I`m Almog Cohen and this is my <span class="secColor">Node-JS Project</span> of
+                furniture api that I've written. 2022</h6>
+        </div>
+        <div class="block col-3 d-none d-lg-block border border-2 border-dark"
+            style="background-image:url(images/second.jpg) ;"></div>
+    </div>
+    <main class="container">
+        <section class="Section">
+            <div class="Title ps-4">
+                <h3><span class="secColor">Furnitures</span> Routes <i class="fa fa-rss" aria-hidden="true"></i></h3>
+                <p>Get information about item via a full API</p>
+                <hr>
+            </div>
+            <table class="table table-striped table-responsive table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Method</th>
+                        <th scope="col">URL</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- get -->
+                    <tr>
+                        <td><span class="Method bg-success">Get</span></td>
+                        <td><a href="/furnitures/all?page=1">/furnitures/all?page=number</a></td>
+                        <td>Get a list of all the furnitures , present 10 results by page number</td>
+                    </tr>
+                    <tr>
+                        <td><span class="Method bg-success">Get</span></td>
+                        <td><a href="/furnitures/all?perPage=2">/furnitures/all?perPage=number</a></td>
+                        <td>Get X items in each page</td>
+                    </tr>
+                    <tr>
+                        <td><span class="Method bg-success">Get</span></td>
+                        <td><a href="/furnitures/all?reverse=yes">/furnitures/all?reverse=sort-key</a></td>
+                        <td>Reverse by sort key: yes/no</td>
+                    </tr>
+                    <tr>
+                        <td><span class="Method bg-success">Get</span></td>
+                        <td><a href="/furnitures/all?sort=price">/furnitures/all?sort=key-word</a></td>
+                        <td>From which value to sort by</td>
+                    </tr>
+                    <tr>
+                        <td><span class="Method bg-success">Get</span></td>
+                        <td><a href="/furnitures/prices?min=10&max=3000">/furnitures/prices?min=number&max=number</a></td>
+                        <td>Price range</td>
+                    </tr>
+                    <tr>
+                        <td><span class="Method bg-success">Get</span></td>
+                        <td><a href="/furnitures/category/Kitchen">/furnitures/category/:category-name</a></td>
+                        <td>Get all furnitures from the same category</td>
+                    </tr>
+                    <tr>
+                        <td><span class="Method bg-success">Get</span></td>
+                        <td><a href="/furnitures/search?s=">/furnitures/search?s=keyword</a></td>
+                        <td>Search products by name ,color or info</td>
+                    </tr>
+                    <tr>
+                        <td><span class="Method bg-success">Get</span></td>
+                        <td><a href="/furnitures/myshop/:userId">/furnitures/myshop/:{userId}</a></td>
+                        <td>Get all furnitures of your User only. <strong class="secColor">Must to be
+                                connected!</strong></td>
+                    </tr>
+                    <!-- get -->
+                </tbody>
+            </table>
+            <div class="Title ps-4">
+                <h3><span class="secColor">Furnitures</span> Actions <i class="fa fa-home" aria-hidden="true"></i></h3>
+                <p>Add, remove and edit allowed <span class="secColor">only for registered users</span></p>
+                <hr>
+            </div>
+            <table class="table table-striped table-responsive">
+                <thead>
+                    <tr>
+                        <th scope="col">Method</th>
+                        <th scope="col">URL</th>
+                        <th scope="col">Body</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="Method bg-warning">Post</span></td>
+                        <td><a href="#">/furnitures</a></td>
+                        <td>
+                            <ul class="list-unstyled">{
+                                <li> "name" : <span class="secColor">String</span></li>
+                                <li> "size" : <span class="secColor">Object (Number)</span></li>
+                                <li> "color" : <span class="secColor">String</span></li>
+                                <li> "info" : <span class="secColor">String</span></li>
+                                <li>"category" : <span class="secColor">String</span></li>
+                                <li> "img" : <span class="secColor">String</span></li>
+                                <li> "price" : <span class="secColor"> Number</span></li>
+                                }
+                            </ul>
+                        </td>
+                        <td>Add a new Item <strong class="secColor">Must to be connected!</strong>
+                            <ol>
+                                <li>name <span class="secColor">(required)</span></li>
+                                <li>size <span class="secColor">(required)</span></li>
+                                <li>color <span class="secColor">(required)</span></li>
+                                <li>info <span class="secColor">(required)</span></li>
+                                <li>category <span class="secColor">(required)</span></li>
+                                <li>img_url</li>
+                                <li>price <span class="secColor">(required)</span></li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="Method bg-info">Edit</span></td>
+                        <td><a href="#">/furnitures/:id-key</a></td>
+                        <td>
+                            <ul class="list-unstyled">{
+                                <li> "name" : <span class="secColor">String</span></li>
+                                <li> "size" : <span class="secColor">Object (Number)</span></li>
+                                <li> "color" : <span class="secColor">String</span></li>
+                                <li> "info" : <span class="secColor">String</span></li>
+                                <li>"category" : <span class="secColor">String</span></li>
+                                <li> "img" : <span class="secColor">String</span></li>
+                                <li> "price" : <span class="secColor"> Number</span></li>
+                                }
+                            </ul>
+                        </td>
+                        <td>Edit a new Item <strong class="secColor">Must to be connected!</strong>
+                            <ol>
+                                <li>name <span class="secColor">(required)</span></li>
+                                <li>size <span class="secColor">(required)</span></li>
+                                <li>color <span class="secColor">(required)</span></li>
+                                <li>info <span class="secColor">(required)</span></li>
+                                <li>category <span class="secColor">(required)</span></li>
+                                <li>img_url</li>
+                                <li>price <span class="secColor">(required)</span></li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="Method bg-danger">Delete</span></td>
+                        <td><a href="#">/furnitures/:id-key</a></td>
+                        <td>
+                        </td>
+                        <td>Delete a new item <strong class="secColor">Must to be connected!</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section class="Section ">
+            <div class="block border border-2 border-dark my-3"
+                style="min-height: 80px; background-image: url(images/strip.jpg);"></div>
+        </section>
+        <!-- try to refresh bugs -->
+        <section class="Section">
+            <div class="TitleB ps-4">
+                <h3><span class="secColor">Users</span> Routes <i class="fa fa-rss" aria-hidden="true"></i></h3>
+                <p>Get information about users from API must be <span class="secColor">an admin</span></p>
+                <hr>
+            </div>
+            <table class="table table-striped table-responsive table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Method</th>
+                        <th scope="col">URL</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="Method bg-success">Get</span></td>
+                        <td><a href="#">/users?page=number</a></td>
+                        <td>Get a list of all the users , present 10 results by page number</td>
+                    </tr>
+                    <tr>
+                        <td><span class="Method bg-success">Get</span></td>
+                        <td><a href="#">/users?perPage=number</a></td>
+                        <td>Get X users in each page</td>
+                    </tr>
+                    <tr>
+                        <td><span class="Method bg-success">Get</span></td>
+                        <td><a href="#">/users?reverse=sort-key</a></td>
+                        <td>Reverse by sort key: yes/no</td>
+                    </tr>
+                    <tr>
+                        <td><span class="Method bg-success">Get</span></td>
+                        <td><a href="#">/users?sort=key-word</a></td>
+                        <td>From which value to sort by</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="TitleB lineBottom">
+                <h3><span class="secColor">Users</span> Actions <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </h3>
+                <p>To Login action you must first register</p>
+                <hr>
+            </div>
+            <table class="table table-striped table-responsive">
+                <thead>
+                    <tr>
+                        <th scope="col">Method</th>
+                        <th scope="col">URL</th>
+                        <th scope="col">Body</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="Method bg-success">Get</span></td>
+                        <td><a href="#">/users/myInfo</a></td>
+                        <td>
+                            <!-- <ul class="list-unstyled">{
+                            <li>"name": <span class="secColor">String</span> </li>
+                            <li>"email":<span class="secColor">String</span></li>
+                            <li>"password":<span class="secColor">String</span></li>
+                          }</ul> -->
+                        </td>
+                        <td>Get all your User information <br> <strong class="secColor">Must to be connected!</strong>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="Method bg-warning">Post</span></td>
+                        <td><a href="#">/users</a></td>
+                        <td>
+                            <ul class="list-unstyled">{
+                                <li>"name" : <span class="secColor">String</span></li>
+                                <li>"email" : <span class="secColor">String</span></li>
+                                <li>"password" : <span class="secColor">String</span></li>
+                                }
+                            </ul>
+                        </td>
+                        <td>Register to the system
+                            <ol>
+                                <li>fullName<span class="secColor">(required)</span></li>
+                                <li>email <span class="secColor">(required)</span></li>
+                                <li>password <span class="secColor">(required)</span></li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span class="Method bg-warning">Post</span></td>
+                        <td><a href="#">/users/login</a></td>
+                        <td>
+                            <ul class="list-unstyled">{
+                                <li>"email" : <span class="secColor">String</span></li>
+                                <li>"password" : <span class="secColor">String</span></li>
+                                }
+                            </ul>
+                        </td>
+                        <td>Login account <strong class="secColor">Must registered first</strong>
+                            <ol>
+                                <li>email <span class="secColor">(required)</span></li>
+                                <li>password <span class="secColor">(required)</span></li>
+                            </ol>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>
